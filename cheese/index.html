@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4c45d">
+  <title>Cheese Mecca — Explore 104 Cheeses</title>
+  <link rel="stylesheet" href="../assets/css/cheese-mecca.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./"><span class="brand-mark">CM</span><span><b>Cheese Mecca</b><small>104 ways to find your favorite</small></span></a>
+  <nav><button class="nav-btn active" data-view="catalog">Catalog</button><button class="nav-btn" data-view="booklet">Booklet</button><button class="nav-btn" data-view="slideshow">Slideshow</button><a class="nav-btn" href="../game/">Game</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">A DIGITAL TASTING COUNTER</p>
+    <h1>Find the cheese that<br><em>gets you.</em></h1>
+    <p>Search by milk, mood, texture, use, or sheer delicious weirdness.</p>
+    <div class="stats"><span><b id="count">104</b> cheeses</span><span><b>4</b> milk families</span><span><b>∞</b> snack possibilities</span></div>
+  </section>
+
+  <section class="controls" id="controls">
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search cheese, flavor, country, pairing…"></label>
+    <select id="milk"><option value="">All milk types</option><option>Cow</option><option>Goat</option><option>Sheep</option><option>Mixed</option><option>Blue</option></select>
+    <select id="use"><option value="">Any occasion</option><option>Cheese Board</option><option>Melting</option><option>Cooking</option><option>Dessert</option><option>Snacking</option></select>
+    <button id="surprise" class="gold-btn">Surprise me</button>
+  </section>
+
+  <section id="catalogView" class="view active"><div id="catalog" class="catalog"></div><p id="empty" class="empty" hidden>No cheese matched. A tiny tragedy. Try fewer filters.</p></section>
+  <section id="bookletView" class="view"><div class="book-shell"><button class="page-arrow" data-step="-1">‹</button><div id="booklet" class="booklet"></div><button class="page-arrow" data-step="1">›</button></div><div class="pager"><span id="bookPage"></span></div></section>
+  <section id="slideshowView" class="view"><div class="slide-shell"><button class="page-arrow" data-slide="-1">‹</button><div id="slide" class="slide"></div><button class="page-arrow" data-slide="1">›</button></div><div class="pager"><span id="slidePage"></span></div></section>
+</main>
+<dialog id="cheeseDialog"><button class="close" aria-label="Close">×</button><article id="detail"></article></dialog>
+<footer><b>Cheese Mecca</b><span>Catalog data prepared for a future game + individual QR system.</span></footer>
+<script src="../assets/js/cheese-mecca.js" defer></script>
+</body></html>
